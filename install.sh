@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/bin/bash -x
 
 apt-get update
 apt-get install -y build-essential make gcc
