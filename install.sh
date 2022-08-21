@@ -29,19 +29,10 @@ ConditionPathExists=!/usr/local/vpnserver/do_not_run
 
 [Service]
 Type=forking
-TasksMax=16777216
 ExecStart=/usr/local/vpnserver/vpnserver start
 ExecStop=/usr/local/vpnserver/vpnserver stop
 KillMode=process
 Restart=on-failure
-
-# Hardening
-PrivateTmp=yes
-ProtectHome=yes
-ProtectSystem=full
-ReadOnlyDirectories=/
-ReadWriteDirectories=/usr/local/vpnserver
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_BROADCAST CAP_NET_RAW CAP_SYS_NICE CAP_SYSLOG CAP_SETUID
 
 [Install]
 WantedBy=multi-user.target
