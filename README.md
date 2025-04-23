@@ -6,6 +6,8 @@
    
 ## To run
 ```bash
+apt-get update
+apt-get install -y git curl
 git clone https://github.com/adjscent/softether_installer.git
 cd softether_installer
 sudo chmod +x install.sh
